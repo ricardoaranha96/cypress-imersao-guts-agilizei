@@ -26,3 +26,16 @@ jobs:
                   node-version: ${{ matrix.node-version }}
             - run: npm install
             - run: npm run cy:run-test-dashboard
+            - name: Cypress Run
+              uses: cypress-io/github-action@v2.9.7
+              with:
+                  record: true
+                  group: Imersão Guts Agilizei
+              env:
+                  CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+            - name: Upload videos
+              uses: actions/upload-artifact@v2.2.0
+              if: always()
+              with:
+                  name: videos
+                  path: cypress/videos
