@@ -9,7 +9,7 @@
         "cy:open-responsive": "cypress open --config viewportWidth=411,viewportHeight=823",
         "cy:run-test": "cypress run",
         "cy:run-test-responsive": "cypress run --config viewportWidth=411,viewportHeight=823",
-        "cy:run-test-dashboard": "cypress run --record --key bdfd6e13-13cb-4b04-99f2-cb98c9447794"
+        "cy:run-test-dashboard": "cypress run --record"
     },
     "keywords": [],
     "author": "",
